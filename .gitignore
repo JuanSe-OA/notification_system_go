@@ -1,0 +1,94 @@
+# === Go ===
+# Compiled binary
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go workspace & cache
+bin/
+build/
+dist/
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+
+# Dependency directories
+vendor/
+
+# Go modules & cache
+/go.sum
+/go.work
+/go.work.sum
+
+# === VS Code ===
+.vscode/
+.history/
+*.code-workspace
+
+# === OS Files ===
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# === IDEs ===
+.idea/
+*.iml
+
+# === Docker ===
+# Ignore Docker build outputs if you add Docker later
+docker-compose.override.yml
+*.env
+.env.*
+*.env.local
+.env.development
+.env.production
+.env.test
+
+# === Logs ===
+logs/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# === Coverage / Testing ===
+coverage.out
+*.coverprofile
+*.prof
+*.cov
+*.gcov
+*.lcov
+*.gcda
+*.gcno
+*.gcov.json
+
+# === Temporary ===
+tmp/
+temp/
+.cache/
+*.bak
+*.swp
+*.old
+
+# === Build Artifacts ===
+*.a
+*.o
+*.obj
+*.dll
+*.exe
+*.so
+*.dylib
