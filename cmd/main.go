@@ -21,7 +21,7 @@ func main() {
 	r.Use(security.JwtMiddleware(jwtUtil))
 
 	// RabbitMQ
-	config.SetupRabbitMQ("amqp://guest:guest@localhost:5672/")
+	config.SetupRabbitMQ("amqp://guest:guest@rabbitmq:5672/")
 
 	// Servicios
 	notifService := service.NewNotificationService()
@@ -30,6 +30,11 @@ func main() {
 	controller.RegisterHealthRoutes(r)
 	controller.RegisterAuthRoutes(r, jwtUtil)
 	controller.RegisterNotificationRoutes(r, notifService)
+
+	port := os.Getenv("SERVER_PORT")
+    if port == "" {
+        port = "8080"
+    }
 
 	log.Println("🚀 Running on :8080")
 	r.Run(":8080")
